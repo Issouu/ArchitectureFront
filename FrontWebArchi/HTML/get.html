@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= stylesheet href="header.css">
+    <link rel= stylesheet href="getBody.css">
+    <title>Archi Blog</title>
+</head>
+<header class="header mf1-position-relative js-header ">
+    <div class="header__container mf1-container mf1-max-width-lg">
+        <a href="/" class="header__title">
+            <span>Archi Blog</span>
+        </a>
+  
+      <button class="mf1-btn mf1-btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+        <i class="header__trigger-icon" aria-hidden="true"></i>
+        <span>Menu</span>
+      </button>
+  
+      <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
+        <div class="header__nav-inner">
+          <div class="header__label">Main menu</div>
+          <ul class="header__list">
+            <li class="header__item"><a href="/" class="header__link" aria-current="page">Liste des articles</a></li>
+            <li class="header__item"><a href="/create" class="header__link">Créer un article</a></li>
+            <li class="header__item"><a href="/contact" class="header__link">Nous Contacter</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+<body>
+  <div class="alert alert--is-visible js-alert" role="alert">
+    <div class="cd-flex cd-items-center cd-justify-between">
+      <div class="cd-flex cd-items-center">
+        <svg class="alert__icon cd-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="currentColor">
+            <path fill-opacity=".2" d="M12 24a12 12 0 1 0 0-24 12 12 0 1 0 0 24z"></path>
+            <path d="M12 9a1 1 0 0 1 1 1l0 9a1 1 0 0 1-2 0l0-9a1 1 0 0 1 1-1z"></path>
+            <path d="M12 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 1 0 0 3z"></path>
+          </g>
+        </svg>
+  
+        <p>
+          <strong class="alert__label">Info:</strong>
+          Aucun article disponible
+          </p>
+      </div>
+    
+      <button class="alert__close-btn js-alert__close-btn">
+        <svg class="cd-icon" viewBox="0 0 16 16">
+          <title>Close alert</title>
+          <g fill="currentColor">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l10 10"></path>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 3L3 13"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+    <div class="container">
+        <h3 class="text-center mb-4">Mes articles</h3>
+      </div>
+      <ul class="grid-auto-md" id="articles-list">
+      </ul>
+</body>
+<script src=get.js></script>

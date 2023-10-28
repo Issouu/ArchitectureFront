@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px; /* Ajustez selon vos besoins */
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem; /* Marge en bas */
+  }
+  
+  .text-center {
+    text-align: center; /* Centrage horizontal */
+  }
+  
+  /* -------------------------------- 
+
+File#: _1_auto-sized-grid
+Title: Auto Sized Grid
+Descr: A grid layout based on CSS Grid where the columns are automatically created according to a min-width value
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  * {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: system-ui, sans-serif;
+    color: hsl(230, 7%, 23%);
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4 {
+    line-height: 1.2;
+    color: hsl(230, 13%, 9%);
+    font-weight: 700;
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+  
+  h2 {
+    font-size: 2.125rem; /* 34px */
+  }
+  
+  h3 {
+    font-size: 1.75rem; /* 28px */
+  }
+  
+  h4 {
+    font-size: 1.375rem; /* 22px */
+  }
+  
+  ol, ul, menu {
+    list-style: none;
+  }
+  
+  button, input, textarea, select {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    -webkit-appearance: none;
+            appearance: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+  }
+  
+  a {
+    color: hsl(250, 84%, 54%);
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  img, video, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* -------------------------------- 
+  
+  Component 
+  
+  -------------------------------- */
+  
+  .grid-auto-xs, .grid-auto-sm, .grid-auto-md, .grid-auto-lg, .grid-auto-xl {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+    margin: 2rem;
+  }
+  
+  .grid-auto-xs {
+    --col-min-width: 8rem;
+  }
+  
+  .grid-auto-sm {
+    --col-min-width: 10rem;
+  }
+  
+  .grid-auto-md {
+    --col-min-width: 15rem;
+  }
+  
+  .grid-auto-lg {
+    --col-min-width: 20rem;
+  }
+  
+  .grid-auto-xl {
+    --col-min-width: 25rem;
+  }
+  
+  /* -------------------------------- 
+  
+  Utilities 
+  
+  -------------------------------- */
+  
+  .cd-width-100\% {
+    width: 100%;
+  }
+  
+  .cd-block {
+    display: block;
+  }
+
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .article-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .article-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px; /* Ajustez la marge en fonction de vos besoins */
+  }
+  
+  .article-title {
+    font-weight: bold;
+    margin: 0.5rem;
+  }
+  
+  /* Reset des styles par défaut des boutons */
+.btn-primary {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin: 0.5rem;
+  cursor: pointer;
+  background-color: #3498db; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.btn-primary :hover {
+  background-color: #2980b9; /* Couleur de fond au survol */
+}
+
+/* -------------------------------- 
+
+File#: _1_alert
+Title: Alert
+Descr: Feedback message
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: system-ui, sans-serif;
+  color: hsl(230, 7%, 23%);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: hsl(230, 13%, 9%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2.125rem; /* 34px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.375rem; /* 22px */
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  color: hsl(250, 84%, 54%);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Icons 
+
+-------------------------------- */
+
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.cd-icon use { /* SVG symbols - enable icon color corrections */
+  color: inherit;
+  fill: currentColor;
+}
+
+/* -------------------------------- 
+
+Component 
+
+-------------------------------- */
+
+.alert {
+  background-color: hsla(250, 84%, 54%, 0.2);
+  color: hsl(230, 13%, 9%);
+  border-radius: 0.375em;
+  padding: 1rem;
+  position: absolute;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  font-size: 0.9375rem;
+}
+
+.alert__icon {
+  --size: 24px;
+  margin-right: 0.5rem;
+  color: hsl(250, 84%, 54%);
+}
+
+.alert__label {
+  font-weight: 700;
+}
+
+.alert__close-btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.alert__close-btn .cd-icon {
+  --size: 16px;
+  display: block;
+}
+
+.alert__close-btn:hover {
+  transform: scale(1.1);
+}
+
+.alert--success {
+  background-color: hsla(170, 78%, 36%, 0.2);
+}
+
+.alert--success .alert__icon {
+  color: hsl(170, 78%, 36%);
+}
+
+.alert--error {
+  background-color: hsla(342, 89%, 48%, 0.2);
+}
+
+.alert--error .alert__icon {
+  color: hsl(342, 89%, 48%);
+}
+
+.alert--warning {
+  background-color: hsla(35, 79%, 66%, 0.2);
+}
+
+.alert--warning .alert__icon {
+  color: hsl(35, 79%, 66%);
+}
+
+.alert__list {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.alert--is-visible {
+  position: static;
+  -webkit-clip-path: none;
+          clip-path: none;
+}
+
+/* -------------------------------- 
+
+Utilities 
+
+-------------------------------- */
+
+.cd-flex {
+  display: flex;
+}
+
+.cd-items-center {
+  align-items: center;
+}
+
+.cd-justify-between {
+  justify-content: space-between;
+}
+
+.cd-margin-top-3xs {
+  margin-top: 0.5rem;
+}

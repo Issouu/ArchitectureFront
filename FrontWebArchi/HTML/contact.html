@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= stylesheet href="header.css">
+    <link rel= stylesheet href="contactBody.css">
+    <title>Archi Blog</title>
+</head>
+<header class="header mf1-position-relative js-header ">
+    <div class="header__container mf1-container mf1-max-width-lg">
+        <a href="/" class="header__title">
+            <span>Archi Blog</span>
+        </a>
+  
+      <button class="mf1-btn mf1-btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+        <i class="header__trigger-icon" aria-hidden="true"></i>
+        <span>Menu</span>
+      </button>
+  
+      <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
+        <div class="header__nav-inner">
+          <div class="header__label">Main menu</div>
+          <ul class="header__list">
+            <li class="header__item"><a href="/" class="header__link">Liste des articles</a></li>
+            <li class="header__item"><a href="/create" class="header__link">Créer un article</a></li>
+            <li class="header__item"><a href="/contact" class="header__link" aria-current="page">Nous Contacter</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+<body>
+  <form>
+    <fieldset class="fw3-margin-bottom-md">
+      <legend class="fw3-form-legend">Nous Contacter</legend>
+  
+      <div class="fw3-grid fw3-gap-sm">
+        <div class="fw3-col-6@md">
+          <label class="fw3-form-label fw3-margin-bottom-2xs" for="input-name">Nom</label>
+          <input class="fw3-form-control fw3-width-100%" type="text" name="input-name" id="input-name" required>
+        </div>
+    
+        <div class="fw3-col-6@md">
+          <label class="fw3-form-label fw3-margin-bottom-2xs" for="input-email">Email</label>
+          <input class="fw3-form-control fw3-width-100%" type="email" name="input-email" id="input-email" placeholder="email@monemail.com" required>
+        </div>
+        
+        <div>
+          <label class="fw3-form-label fw3-margin-bottom-2xs" for="textarea">Message</label>
+          <textarea class="fw3-form-control fw3-width-100%" name="textarea" id="textarea"></textarea>
+        </div>
+      </div>
+    </fieldset>
+  
+    <div>
+      <button class="fw3-btn fw3-btn--primary">Envoyer</button>
+    </div>
+  </form>
+</body>
