@@ -2,9 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser")
 const path = require("path");
 
-const PORT = 3001;
-const HOST_NAME = "localhost";
-const backURL = "http://localhost:4000";
+const PORT = 3000;
+const HOST_NAME = "0.0.0.0";
+const backURL = "http://backend-service:80";
 
 const app = express();
 app.use(express.static("HTML"));
